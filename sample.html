@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Bare - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+    body {
+        padding-top: 70px;
+    }
+    </style>
+
+    <!-- Angular.js v1.3.13 -->
+    <script type="text/javascript" src="angular/angular.js"></script>
+
+    <!-- App.js -->
+    <script src="angular/app.js"></script>
+
+    <!-- Sample controller -->
+    <script src="angular/SampleController.js"></script>
+
+    <!-- Sample service -->
+    <script src="angular/SampleService.js"></script>
+
+
+</head>
+
+<body ng-app="sampleApp" ng-controller="sampleController">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1>{{title}}</h1>
+                <p class="lead">{{subTitle}}</p>
+                <ul class="list-unstyled">
+                    <li ng-repeat="dependency in dependencies">{{dependency}}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <button ng-click="callWebService();">Call a Sample Service</button>
+                <pre ng-show="isClick">{{sampleJson}}</pre>
+            </div>
+        </div>
+         
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted">Created by: JimmyDave</p>
+            <p class="text-muted">Api Reference: <a href="http://jsonplaceholder.typicode.com/">JsonPlaceHolder.typicode.com</a></p>
+            <p class="text-muted">Design Reference: <a href="http://startbootstrap.com/template-overviews/bare/">StartBootstrap.com</a></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
